@@ -1,0 +1,54 @@
+
+# demo 1
+import PyPDF2
+
+# List of PDF files to be merged
+pdf_files = ["file1.pdf", "file2.pdf", "file3.pdf"]
+
+
+# Function to merge PDF files
+def merge_pdfs(pdf_files, output_filename):
+    pdf_merger = PyPDF2.PdfMerger()
+
+    for pdf_file in pdf_files:
+        pdf_merger.append(pdf_file)
+
+    with open(output_filename, "wb") as output_file:
+        pdf_merger.write(output_file)
+
+
+# Output PDF file name
+output_pdf = "merged.pdf"
+
+# Merge the PDF files
+merge_pdfs(pdf_files, output_pdf)
+
+print(f"PDF files {pdf_files} merged into {output_pdf}")
+
+-----------------------------------------------------------
+
+# demo 2
+import PyPDF2
+
+# List of PDF files to be merged
+pdf_files = ["file1.pdf", "file2.pdf", "file3.pdf"]
+
+
+# Function to merge PDF files
+def merge_pdfs(pdf_files, output_filename):
+    pdf_merger = PyPDF2.PdfMerger()
+
+    for pdf_file in pdf_files:
+        pdf_merger.append(pdf_file)
+
+    with open(output_filename, "wb") as output_file:
+        pdf_merger.write(output_file)
+
+
+# Output PDF file name
+output_pdf = "merged.pdf"
+
+# Merge the PDF files
+merge_pdfs(pdf_files, output_pdf)
+
+print(f"PDF files {pdf_files} merged into {output_pdf}")
